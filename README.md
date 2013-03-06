@@ -38,11 +38,11 @@ Note: on Windows ssh may be slightly problematic - see the Vagrant information l
 
 1. Install Oracle Virtual Box: http://download.virtualbox.org/virtualbox/4.2.0/
 2. Install Vagrant: http://downloads.vagrantup.com/tags/v1.0.6
-3. Install Virtual Box Guest Additions: $vagrant gem install vagrant-vbguest
+3. Install Virtual Box Guest Additions: `vagrant gem install vagrant-vbguest`
 4. Checkout this repository: `git clone git://github.com/leondutoit/shiny-server-on-ubuntu.git`
 5. Navigate to the repository folder locally: `cd shiny-server-on-ubuntu`
 6. Run: `vagrant up`
-7. If that did not work try: $vagrant reload (you will need a good network connection since many resources have to be copied to your machine; this can often be a source of trouble when running vagrant up)
+7. If that did not work try: `vagrant reload` (you will need a good network connection since many resources have to be copied to your machine; this can often be a source of trouble when running vagrant up). When in doubt run: `vagrant destroy; vagrant up`.
 
 
 Workflow Instructions
