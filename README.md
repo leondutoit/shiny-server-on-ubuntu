@@ -39,28 +39,28 @@ Note: on Windows ssh may be slightly problematic - see the Vagrant information l
 1. Install Oracle Virtual Box: http://download.virtualbox.org/virtualbox/4.2.0/
 2. Install Vagrant: http://downloads.vagrantup.com/tags/v1.0.6
 3. Install Virtual Box Guest Additions: $vagrant gem install vagrant-vbguest
-4. Checkout this repository: git clone <repo_name>.git
-5. Navigate to the repository folder locally: $cd <repo_name>
-6. Run: $vagrant up
+4. Checkout this repository: `git clone git://github.com/leondutoit/shiny-server-on-ubuntu.git`
+5. Navigate to the repository folder locally: `cd shiny-server-on-ubuntu`
+6. Run: `vagrant up`
 7. If that did not work try: $vagrant reload (you will need a good network connection since many resources have to be copied to your machine; this can often be a source of trouble when running vagrant up)
 
 
 Workflow Instructions
 ---------------------
 
-On your host, in /repo_name/ there are two folders: /apps and /puppet.
-If you place your shiny app folders in /apps, they will be served at localhost:3838/apps/your_app_folder/.
+On your host, in `/shiny-server-on-ubuntu` there are two folders: `/apps` and `/puppet`.
+If you place your shiny app folders in `/apps`, they will be served at `localhost:3838/apps/your_app_folder/`.
 
-1. ssh to your virtual machine and start having fun! $vagrant ssh
-2. After $vagrant ssh, do $cd /vagrant, and then at /vagrant$ls (Files on your local machine will be visible at /vagrant$ in the VM)
-3. To see your apps just make sure you develop them in /apps - they will be served without having to set up anything - no reloads, no restarts!
-4. The file: usefulpackages.R contains all the add-on packages that are installed on the virtual machine. If you shiny app depends on a package not installed in the R environment on the VM you have to install it manually. You can do like so: $vagrant ssh, $sudo R, R>install.packages("whatever", dep=TRUE).
+1. ssh to your virtual machine and start having fun! `vagrant ssh`
+2. After `vagrant ssh`, do `cd /vagrant; ls` (Files on your local machine will be visible at /vagrant$ in the VM)
+3. To see your apps just make sure you develop them in `/apps` - they will be served without having to set up anything - no reloads, no restarts!
+4. The file: usefulpackages.R contains all the add-on packages that are installed on the virtual machine. If you shiny app depends on a package not installed in the R environment on the VM you have to install it manually. You can do like so: `vagrant ssh; sudo R, R > install.packages("whatever", dep=TRUE)`.
 
 
 Information about Vagrant and Puppet
 ------------------------------------
 
-- navigate to <repo_name>/puppet to look at the configuration
+- navigate to `/shiny-server-on-ubuntu/puppet` to look at the configuration
 - the "Vagrantfile" contains the configuration to set up the VM
 - I highly recommend working through this tutorial to get to know [Vagrant](http://docs.vagrantup.com/v1/docs/getting-started/index.html)
 - For a reference visit [Puppet](https://puppetlabs.com/)
