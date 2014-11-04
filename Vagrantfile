@@ -22,6 +22,7 @@ wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.2.3.368-amd
 sudo gdebi shiny-server-1.2.3.368-amd64.deb
 sudo dpkg -i *.deb
 rm *.deb
+sudo ln -s /vagrant/apps /srv/shiny-server
 BOOTSTRAP
 
   config.vm.provision :shell, :inline => $script

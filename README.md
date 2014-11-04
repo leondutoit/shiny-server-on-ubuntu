@@ -7,4 +7,8 @@
 4. Checkout this repository: `$ git clone https://github.com/leondutoit/shiny-server-on-ubuntu.git`
 5. Navigate to the repository folder locally: `cd shiny-server-on-ubuntu`
 6. Run: `vagrant up`
-7. Shiny server is now visible at `localhost:3838` on you machine.
+7. Shiny server is now visible at `localhost:3838` on your machine.
+
+### Workflow
+
+Put your apps in `shiny-server-on-ubuntu/apps` and they will be visible at `localhost:3838/apps/` on your machine.
