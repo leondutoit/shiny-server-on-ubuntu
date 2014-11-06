@@ -12,9 +12,13 @@ $script = <<BOOTSTRAP
 sudo apt-get update
 sudo apt-get -y install git gcc
 sudo apt-get -y install libxml2-dev libcurl4-openssl-dev libssl0.9.8 libcairo2-dev
+sudo apt-get -y install mesa-common-dev
+sudo apt-get -y install openjdk-6-jre
+sudo apt-get -y install openjdk-6-jdk
 sudo add-apt-repository ppa:marutter/rrutter
 sudo apt-get update
 sudo apt-get -y install r-base r-base-dev
+sudo R CMD javareconf
 sudo R -e "install.packages('http://cran.r-project.org/src/contrib/Archive/shiny/shiny_0.10.1.tar.gz', repos=NULL, type='source')"
 sudo R -e "install.packages('rmarkdown', repos = 'http://cran.rstudio.com/', dep = TRUE)"
 sudo R -e "install.packages('devtools', repos = 'http://cran.rstudio.com/', dep = TRUE)"
