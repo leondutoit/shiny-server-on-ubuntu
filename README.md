@@ -1,4 +1,8 @@
 
+### Intention
+
+This project is intended to provide a base VM that can be used to serve shiny applications locally without having to install shiny-server on your own machine. This can be useful for development puropses. People who find this useful are encouraged to clone the repo and use the VM or fork merge their own applications into their fork. Contributions that aim to improve the usefulness of the base VM are if course welcome.
+
 ### Setup instructions
 
 1. Download and install Oracle Virtual Box [here](http://download.virtualbox.org/virtualbox/4.2.0/)
