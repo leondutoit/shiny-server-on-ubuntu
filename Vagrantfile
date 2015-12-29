@@ -23,6 +23,7 @@ sudo gdebi shiny-server-1.2.3.368-amd64.deb
 sudo dpkg -i *.deb
 rm *.deb
 sudo ln -s /vagrant/apps /srv/shiny-server
+sudo usermod -a -G vagrant shiny
 BOOTSTRAP
 
   config.vm.provision :shell, :inline => $script
